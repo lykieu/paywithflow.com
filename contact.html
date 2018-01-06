@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Flow App</title>
+  <link rel="shortcut icon" href="assets/img/icon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111501789-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111501789-1');
+  </script>
+
+</head>
+<body>
+  <div class="main">
+    <nav id="top-bar">
+      <div class="container">
+        <div class="top-bar">
+          <div class="left-items">
+            <a class="logo" href="index.html">
+              <img src="assets/img/white-logo.png" alt="">
+            </a>
+            <button class="expand-button" type="button" name="button">
+              <img src="assets/img/icon/menu-icon.png" alt="">
+            </button>
+          </div>
+          <div class="menu">
+            <a href="vision.html">Vision</a>
+            <a href="business.html" target="_blank">Businesses</a>
+            <a class="active" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="head-background"></div>
+    <!-- Contact -->
+    <div class="contact">
+      <div class="container">
+        <div class="space-for-section">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <h2 class="title"> Drop us a line </h2>
+              <p class="text">We have a vision, and we know where we're going.
+                But we still love questions and feedback. Write to us about anything on your mind...
+                What's the latest from Flow money? Who will win the super bowl? Why do cats meow?
+                If you're wondering whether we can go to the moon and back in one day,
+                please refer those questions to head of moonshots @elonmusk.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <form
+                action="https://app.paywithflow.com/paywithflow-website/contact"
+                method="post"
+                id="contact-form"
+                class="contact-form"
+              >
+                <div class="row">
+                  <div class="col-12">
+                    <div class="f-input">
+                      <p>Name</p>
+                      <input name="name" id="name" type="text" placeholder="Name" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="f-input">
+                      <p>Email</p>
+                      <input name="email" id="email" type="text" placeholder="Email" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="f-input">
+                      <p>Subject</p>
+                      <input name="subject" id="subject" type="text" placeholder="Subject" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="f-input">
+                      <p>Content</p>
+                      <textarea name="content" id="content" placeholder="Content"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="reCapcha" id="google-recapcha"></div>
+                <p class="contact-notification"></p>
+                <button id="contact-form-button" class="f-button" type="submit">Send</button>
+              </form>
+            </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <img class="footer-logo" src="assets/img/gray-logo.png">
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="term">
+                  <a href="https://app.paywithflow.com/api/v1/flow_app/tos" target="_blank">TERMS AND CONDITIONS</a>&ensp;|&ensp;<a href="https://app.paywithflow.com/api/v1/flow_app/privacy" target="_blank">PRIVACY POLICY</a>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
+  <script src="assets/js/vendors/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/9.2.0/validator.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+  </script>
+  <script src="assets/js/vendors/contact.js"></script>
+</body>
+</html>
