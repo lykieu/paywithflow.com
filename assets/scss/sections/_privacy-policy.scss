@@ -1,0 +1,47 @@
+
+.main-privacy-policy{
+  nav {
+    height: 60px;
+    background-color: #008486;
+    position: absolute;
+    .left-items {
+      padding: 12px 0 ;
+      .logo {
+        img {
+          width: 100px;
+        }
+      }
+    }
+    @include breakpoint($bs-md){
+      height: auto;
+    }
+  }
+  .content-text{
+    background-color: #f9f9f9;
+    padding-top: 170px;
+    padding-bottom: 98px;
+    .text{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 800px;
+      a{
+        color: #595959;
+      }
+      h1{
+        width: 217px;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 26px;
+        font-weight: 600;
+        color: #4c4c4c;
+        margin-bottom: 50px;
+        border-bottom: 6px solid #17b0b3;
+      }
+      p{
+         font-family: 'Work Sans', sans-serif;
+         font-size: 15px;
+         line-height: 27px;
+         color: #595959;
+       }
+    }
+  }
+}
