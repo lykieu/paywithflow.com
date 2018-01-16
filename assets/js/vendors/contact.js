@@ -2,13 +2,15 @@
 
 // Google ReCapcha
 var isVerifyCapcha = false
-const verifyCallback = function(response) {
-  isVerifyCapcha = true
-};
 var onloadCallback = function() {
   grecaptcha.render('google-recapcha', {
     'sitekey' : '6LdaFTMUAAAAAEvy3R4BPRmYojuebdlzckwlKSla',
-    'callback' : verifyCallback
+    'callback' : function(response) {
+      isVerifyCapcha = true
+    },
+    'expired-callback': function(response) {
+      isVerifyCapcha = false
+    }
   });
 };
 
@@ -62,7 +64,7 @@ $('#contact-form').submit(function(event) {
 
     $.ajax({
       type: "POST",
-      url: "https://app.paywithflow.com/paywithflow-website/contact",
+      url: "https://paywithflow.pw/paywithflow-website/contact",
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       data: JSON.stringify(formdata),
@@ -80,7 +82,7 @@ $('#contact-form').submit(function(event) {
       },
       error: function(error) {
         submitButton.text('Send')
-        notification.text(error)
+        notification.text('Something went wrong!')
         setTimeout(function(){
           notification.text('')
         }, 4000);
@@ -95,11 +97,11 @@ $('#contact-form').submit(function(event) {
   }
 });
 
-//
-//
+
+// 
 // function renderMap() {
 //   var mapProp = {
-//     center:new google.maps.LatLng(16.458753, 107.591764),
+//     center:new google.maps.LatLng(16.458740, 107.591851),
 //     zoom: 15,
 //     styles: [
 //       {

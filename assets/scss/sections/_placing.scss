@@ -1,0 +1,81 @@
+.placing {
+  background-color: #fafafa;
+  position: relative;
+  .space-for-section {
+    padding: 10em 0 5em 0;
+  }
+  .decor {
+    height: 200px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: url("../img/rectangle-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -1px;
+  }
+  .text {
+    margin: auto 0;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+    text-align: left;
+    .title {
+      display: flex;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      .title-icon {
+        margin-right: 1em;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        img {
+          height: 120px;
+        }
+      }
+      h2 {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+  @include breakpoint($bs-xx){
+    .space-for-section {
+      padding: 8em 0 4em 0;
+    }
+    .text .title .title-icon img {
+      height: 100px;
+    }
+  }
+  @include breakpoint($bs-xl){
+    .space-for-section {
+      padding: 7em 0 4em 0;
+    }
+  }
+  @include breakpoint($bs-md){
+    .space-for-section {
+      padding: 6em 0 4em 0;
+    }
+  }
+  @include breakpoint($bs-sm){
+    .space-for-section {
+      padding: 5em 0 4em 0;
+    }
+  }
+  @include breakpoint($bs-md) {
+    .text {
+      padding-bottom: 2em;
+      text-align: center;
+      .title {
+        flex-direction: column;
+        .title-icon {
+          margin-right: 0;
+          align-items: center;
+          flex-direction: unset;
+          margin-bottom: .5em;
+        }
+      }
+    }
+  }
+}

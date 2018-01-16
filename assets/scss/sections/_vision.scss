@@ -1,0 +1,124 @@
+.vision {
+  background: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  .space-for-section {
+    padding: 5em 0 3em 0;
+  }
+  .decor-1 {
+    position: absolute;
+    top: -2em;
+  }
+  .decor-2 {
+    position: absolute;
+    bottom: 0;
+  }
+  .decor-3 {
+    position: absolute;
+    right: 0;
+    top: -2em;
+  }
+  .decor-4 {
+    position: absolute;
+    bottom: 11em;
+    right: 3em;
+  }
+  .statements {
+    margin-top: 2em;
+    p {
+      font-size: 20px;
+      margin: 3em 0;
+    }
+  }
+  .text {
+    padding: .6em;
+    position: relative;
+    font-size: 16px;
+    z-index: 2;
+    border-radius: 10px;
+  }
+  .title {
+    font-size: 20px;
+    margin-left: .5em;
+  }
+  .footer {
+    height: 12em;
+    background: url(../img/bg-footer.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .content {
+      padding: 2em;
+      text-align: center;
+      .term {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          margin: 0;
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+      .network {
+        height: 100%;
+        a {
+          margin: 0 5px;
+          width: 30px;
+          text-decoration: none;
+          img {
+            width: inherit;
+          }
+          &.youtube {
+            width: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint($bs-xx) {
+    .statements {
+      p {
+        font-size: 17px;
+      }
+    }
+    .text {
+      font-size: 14px;
+    }
+    .title {
+      font-size: 16px;
+    }
+  }
+  @include breakpoint($bs-md) {
+    .space-for-section {
+      padding: 4em 0 2em 0;
+    }
+    .decor-1 {
+      display: none;
+    }
+    .decor-2 {
+      display: none;
+    }
+    .decor-3 {
+      display: none;
+    }
+    .decor-4 {
+      display: none;
+    }
+    .footer {
+      .content {
+        .footer-logo {
+          display: none;
+        }
+        .network {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}

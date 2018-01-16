@@ -1,0 +1,51 @@
+.head-background {
+  background: url("../img/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: center;
+  height: 14em;
+  @include breakpoint($bs-xl){
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  .space-for-section {
+    padding: 7em 0 1em 0;
+  }
+  .contact-form {
+    .contact-notification {
+      color: #e02727;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+  }
+  .title {
+    text-transform: none;
+  }
+  .text {
+    padding-right: 3em;
+  }
+
+  @include breakpoint($bs-md) {
+    text-align: center;
+    .space-for-section {
+      padding: 5em 0 0 0;
+    }
+    .contact-form .reCapcha {
+      display: flex;
+      justify-content: center;
+    }
+    .text {
+      padding-right: 0em;
+    }
+    .informations {
+      .line {
+        justify-content: center;
+      }
+    }
+  }
+}

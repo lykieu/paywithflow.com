@@ -77,6 +77,11 @@ $('.top-bar .expand-button').click(function() {
     $('#top-bar').removeClass('is-expand');
   }
 })
+$('#top-bar').blur(function(){
+  $('#top-bar').removeClass('is-expand');
+  isTopBarExpand = false
+})
+
 
 // Back to Top
 $(".back-to-top").click(function () {

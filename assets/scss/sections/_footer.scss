@@ -1,0 +1,64 @@
+.landing-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  .copy-right {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    img {
+      width: 130px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 17px;
+      color: #C7DDF0;
+    }
+  }
+  .line {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    a {
+      color: #C7DDF0;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint($bs-xx) {
+    .copy-right {
+      img {
+        width: 100px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .line {
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+  @include breakpoint($bs-md) {
+    padding: 1em 0 2em 0;
+    flex-direction: column;
+    align-items: center;
+    .copy-right {
+      p {
+        color: #595959;
+      }
+      img {
+        display: none;
+      }
+    }
+    .line {
+      align-items: center;
+      a {
+        color: #595959;
+      }
+    }
+  }
+}
