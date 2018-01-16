@@ -1,24 +1,8 @@
 
 .main-privacy-policy{
-  nav {
-    height: 60px;
-    background-color: #008486;
-    position: absolute;
-    .left-items {
-      padding: 12px 0 ;
-      .logo {
-        img {
-          width: 100px;
-        }
-      }
-    }
-    @include breakpoint($bs-md){
-      height: auto;
-    }
-  }
   .content-text{
     background-color: #f9f9f9;
-    padding-top: 170px;
+    padding-top: 80px;
     padding-bottom: 98px;
     .text{
       margin-left: auto;
